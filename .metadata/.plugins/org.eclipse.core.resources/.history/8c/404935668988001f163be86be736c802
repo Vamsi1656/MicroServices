@@ -1,0 +1,27 @@
+package net.microservices.employeeservice.controller
+;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+import lombok.AllArgsConstructor;
+import net.microservices.employeeservice.dto.EmployeeDto;
+import net.microservices.employeeservice.service.EmployeeService;
+
+@RestController
+@AllArgsConstructor
+public class EmployeeController {
+	
+	private EmployeeService employeeservice;
+	
+	
+	public ResponseEntity<EmployeeDto> saveEmployee(EmployeeDto employeeDto){
+		EmployeeDto saveemployee =employeeservice.saveEmployee(employeeDto);
+		
+		return new ResponseEntity<>(saveemployee,HttpStatus.CREATED);		
+	}
+	
+	
+
+}

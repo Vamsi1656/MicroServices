@@ -1,0 +1,5 @@
+package net.microservices.employeeservice.repository;
+
+public interface EmployeeRepository {
+
+}

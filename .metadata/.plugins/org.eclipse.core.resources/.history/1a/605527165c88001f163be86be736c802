@@ -1,0 +1,5 @@
+package net.microservices.departmentservice.repository;
+
+public interface DepartmentRepository {
+
+}

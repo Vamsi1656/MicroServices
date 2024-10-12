@@ -1,0 +1,5 @@
+package net.microservices.departmentservice.service;
+
+public interface DepartmentService {
+
+}

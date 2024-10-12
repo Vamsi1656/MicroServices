@@ -1,0 +1,5 @@
+package net.microservices.departmentservice.controller;
+
+public class DepartmentController {
+
+}

@@ -1,0 +1,54 @@
+package net.microservices.employeeservice.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import lombok.AllArgsConstructor;
+import net.microservices.employeeservice.dto.EmployeeDto;
+import net.microservices.employeeservice.entity.Employee;
+import net.microservices.employeeservice.repository.EmployeeRepository;
+import net.microservices.employeeservice.service.EmployeeService;
+
+@Service
+@AllArgsConstructor
+public class EmployeeServiceImpl implements EmployeeService {
+	@Autowired
+	private EmployeeRepository employeeRepo;
+
+	@Override
+	public EmployeeDto saveEmployee(EmployeeDto employeeDto) {
+		Employee employee=new Employee(
+				employeeDto.getEmployeeid(),
+				employeeDto.getFirstName(),
+				employeeDto.getLastName(),
+				employeeDto.getEmail()
+				);
+		
+		Employee savedemployee=employeeRepo.save(employee);
+		
+		EmployeeDto savedemployeeDto=new EmployeeDto(
+				savedemployee.getEmployeeid(),
+				savedemployee.getFirstName(),
+				savedemployee.getLastName(),
+				savedemployee.getEmail()
+				
+				);
+				
+		return savedemployeeDto;
+	}
+
+	@Override
+	public EmployeeDto getEmployeeById(Long employeeId) {
+		Employee employee=employeeRepo.findById(employeeId).get();
+		
+		EmployeeDto employeeDto=new EmployeeDto(
+				employee.getEmployeeid(),
+				employee.getFirstName(),
+				employee.getLastName(),
+				employee.getEmail()
+				
+				);
+		return employeeDto;
+	}
+
+}

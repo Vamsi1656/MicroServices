@@ -1,0 +1,5 @@
+package net.microservices.employeeservice.entity;
+
+public class Employee {
+
+}

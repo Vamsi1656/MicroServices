@@ -1,0 +1,5 @@
+package net.microservices.employeeservice.dto;
+
+public class EmployeeDto {
+
+}

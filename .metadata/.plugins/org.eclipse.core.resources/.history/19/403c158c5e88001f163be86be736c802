@@ -1,0 +1,10 @@
+package net.microservices.departmentservice.service;
+
+import net.microservices.departmentservice.dto.DepartmentDto;
+import net.microservices.departmentservice.entity.Department;
+
+public interface DepartmentService {
+	
+	Department saveDepartment(DepartmentDto departmentDto);
+
+}

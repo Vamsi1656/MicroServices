@@ -1,0 +1,5 @@
+package net.microservices.departmentservice.service.impl;
+
+public class DepartmentServiceImpl {
+
+}

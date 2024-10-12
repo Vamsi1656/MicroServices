@@ -1,0 +1,5 @@
+package net.microservices.employeeservice.service;
+
+public interface EmployeeService {
+
+}

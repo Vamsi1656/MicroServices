@@ -1,0 +1,5 @@
+package net.microservices.departmentservice.dto;
+
+public class DepartmentDto {
+
+}

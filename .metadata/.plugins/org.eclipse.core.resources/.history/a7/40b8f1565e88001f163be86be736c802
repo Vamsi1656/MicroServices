@@ -1,0 +1,15 @@
+package net.microservices.departmentservice.service.impl;
+
+import net.microservices.departmentservice.dto.DepartmentDto;
+import net.microservices.departmentservice.entity.Department;
+import net.microservices.departmentservice.service.DepartmentService;
+
+public class DepartmentServiceImpl implements DepartmentService {
+
+	@Override
+	public Department saveDepartment(DepartmentDto departmentDto) {
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,5 @@
+package net.microservices.employeeservice.controller;
+
+public class EmployeeController {
+
+}
