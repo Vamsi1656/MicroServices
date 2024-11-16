@@ -19,8 +19,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 	@Override
 	public DepartmentDto saveDepartment(DepartmentDto departmentDto) {
 		
-		// Convert departmentdto into department entity
-		
+
 		Department department=new Department(
 				departmentDto.getId(),
 				departmentDto.getDepartmentName(),
